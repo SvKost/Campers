@@ -3,6 +3,9 @@ import { getAdverts } from './operations';
 
 const INITIAL_STATE = {
   items: [],
+  favorites: [],
+  location: '',
+  filters: { equipment: [], type: [] },
   isLoading: false,
   isError: false,
 };
@@ -10,6 +13,22 @@ const INITIAL_STATE = {
 const advertsSlice = createSlice({
   name: 'adverts',
   initialState: INITIAL_STATE,
+  reducers: {
+    addToFavorites: (state, action) => {
+      state.favorites.push(action.payload);
+    },
+    removeFromFavorites: (state, action) => {
+      state.favorites = state.favorites.filter(
+        item => item.id !== action.payload.id
+      );
+    },
+    setLocation: (state, action) => {
+      state.location = action.payload;
+    },
+    setFilters: (state, action) => {
+      state.filters = action.payload;
+    },
+  },
   extraReducers: builder => {
     builder
       .addCase(getAdverts.pending, state => {
@@ -28,3 +47,5 @@ const advertsSlice = createSlice({
 });
 
 export const advertsReducer = advertsSlice.reducer;
+export const { addToFavorites, removeFromFavorites, setLocation, setFilters } =
+  advertsSlice.actions;
