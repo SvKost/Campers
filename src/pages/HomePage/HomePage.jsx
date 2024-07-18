@@ -1,11 +1,12 @@
 import { NavLink } from 'react-router-dom';
 import Container from '../../components/Container/Container';
 import AppBar from '../../components/AppBar/AppBar';
+import DocumentTitle from '../../components/DocumentTitle';
 
 const HomePage = () => {
   return (
     <div>
-      <title>Home Page</title>
+      <DocumentTitle>Home Page</DocumentTitle>
 
       <AppBar />
       <section>

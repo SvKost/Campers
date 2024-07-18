@@ -1,5 +1,7 @@
+import DocumentTitle from '../../components/DocumentTitle';
+
 const Favorites = () => {
-  return <div>Favorites</div>;
+  return <DocumentTitle>Favorites</DocumentTitle>;
 };
 
 export default Favorites;
