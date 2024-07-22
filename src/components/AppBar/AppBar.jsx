@@ -9,19 +9,20 @@ const AppBar = () => {
   };
 
   return (
-    <header>
-      <NavLink to="home" className={css.logo}>
-        Campers Rent
-      </NavLink>
-      <nav>
-        <NavLink to="/catalog" className={buildLinkClass}>
-          catalog
-        </NavLink>
-        <NavLink to="/favorites" className={buildLinkClass}>
-          <Icon iconName="favorite" width="18" height="18" />
-        </NavLink>
-      </nav>
-    </header>
+    <>
+      <header>
+        <nav>
+          <NavLink to="/">Home </NavLink>
+
+          <NavLink to="/catalog" className={buildLinkClass}>
+            Catalog
+          </NavLink>
+          <NavLink to="/favorites" className={buildLinkClass}>
+            <Icon iconName="favorite" width="18" height="18" />
+          </NavLink>
+        </nav>
+      </header>
+    </>
   );
 };
 

@@ -5,7 +5,7 @@ const INITIAL_STATE = {
   items: [],
   favorites: [],
   location: '',
-  filters: { equipment: [], type: [] },
+  filters: { camperEquipment: [], camperType: '' },
   isLoading: false,
   isError: false,
 };
