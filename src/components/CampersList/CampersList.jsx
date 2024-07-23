@@ -7,6 +7,7 @@ import {
 } from '../../redux/selectors';
 import CamperCard from '../CamperCard/CamperCard';
 import { NavLink, useLocation } from 'react-router-dom';
+import ButtonLoadMore from '../ButtonLoadMore/ButtonLoadMore';
 
 const CampersList = () => {
   const adverts = useSelector(selectAdverts);
@@ -14,11 +15,8 @@ const CampersList = () => {
   const isError = useSelector(selectIsError);
   const location = useLocation();
 
-  console.log(adverts);
-
   return (
-    <section>
-      <h4>CampersList</h4>
+    <div>
       <ul>
         {adverts.map(advert => {
           return (
@@ -30,8 +28,8 @@ const CampersList = () => {
           );
         })}
       </ul>
-      <button>Load more</button>
-    </section>
+      <ButtonLoadMore>Load more</ButtonLoadMore>
+    </div>
   );
 };
 

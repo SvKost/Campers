@@ -1,0 +1,22 @@
+.button {
+  display: inline-flex;
+  padding: 16px 60px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 200px;
+  border: none;
+  background: var(--button-color);
+  color: var(--page-bg-color);
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.08px;
+  font-size: inherit;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+  background: #d84343;
+}

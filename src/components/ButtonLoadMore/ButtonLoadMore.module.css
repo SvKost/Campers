@@ -1,0 +1,23 @@
+.button {
+  display: inline-flex;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 200px;
+  border: 1px solid rgba(71, 84, 103, 0.2);
+  background-color: inherit;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.08px;
+  color: var(--main-text-color);
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  border: 1px solid var(--button-color);
+}
