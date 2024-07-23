@@ -8,6 +8,7 @@ import {
 import CamperCard from '../CamperCard/CamperCard';
 import { NavLink, useLocation } from 'react-router-dom';
 import ButtonLoadMore from '../ButtonLoadMore/ButtonLoadMore';
+import css from './CampersList.module.css';
 
 const CampersList = () => {
   const adverts = useSelector(selectAdverts);
@@ -16,8 +17,8 @@ const CampersList = () => {
   const location = useLocation();
 
   return (
-    <div>
-      <ul>
+    <section>
+      <ul className={css.campersList}>
         {adverts.map(advert => {
           return (
             <li key={advert._id}>
@@ -29,7 +30,7 @@ const CampersList = () => {
         })}
       </ul>
       <ButtonLoadMore>Load more</ButtonLoadMore>
-    </div>
+    </section>
   );
 };
 

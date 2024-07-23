@@ -59,7 +59,7 @@
     <symbol id="tv" viewBox="0 0 32 32">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M24 26H8c-2.216 0-4-1.784-4-4V12c0-2.216 1.784-4 4-4h16c2.216 0 4 1.784 4 4v10c0 2.216-1.784 4-4 4zM12 30h8M16 8l6-6M16 8l-6-6"/>
     </symbol>
-    <symbol id="favorite" viewBox="0 0 32 32">
+    <symbol id="heart" viewBox="0 0 32 32">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3.067" d="M27.787 6.147a7.326 7.326 0 0 0-10.373 0L16.001 7.56l-1.413-1.413a7.333 7.333 0 0 0-10.374 0 7.333 7.333 0 0 0 0 10.374l11.787 11.787 11.787-11.787a7.345 7.345 0 0 0 2.15-5.187 7.33 7.33 0 0 0-2.15-5.187z"/>
     </symbol>
     <symbol id="conder" viewBox="0 0 32 32">
