@@ -1,33 +1,53 @@
 import css from './CamperCard.module.css';
 import CampersDetails from '../CampersDetails/CampersDetails';
 import Icon from '../Icon/Icon';
+import Button from '../Button/Button';
 
 const CamperCard = ({ data }) => {
-  const { name, gallery, price, rating, location } = data;
+  const { name, gallery, price, rating, location, reviews } = data;
 
   return (
     <div className={css.camperCard}>
-      <div className={css.camperImage}>
-        <img src={gallery[0]} alt={name} width={290} height={310} />
-      </div>
       <div>
+        <img
+          className={css.camperImage}
+          src={gallery[0]}
+          alt={name}
+          width={290}
+          height={310}
+        />
+      </div>
+      <div className={css.cardDescription}>
         <div>
           <p>{name}</p>
-          <p>€{price}.00</p>
-          <Icon
-            width="24"
-            height="24"
-            iconName="heart"
-            styles={css.iconHeart}
-            // style={{ fill: 'blue' }}
-          ></Icon>
+          <div>
+            <p>€{price}</p>
+            <button
+              type="button"
+              className={css.favoriteButton}
+              // onClick={handleFavoriteClick}
+            >
+              <Icon
+                iconName="heart"
+                width="24"
+                height="24"
+                styles={css.iconHeart}
+              />
+            </button>
+          </div>
         </div>
-        <p>{rating}</p>
-        <p>{location}</p>
-      </div>
 
-      {/* modal
-      <CampersDetails camper={data} /> */}
+        <p>
+          {rating}({reviews.length} Reviews)
+        </p>
+        <p>{location}</p>
+
+        <p>The pictures shown here are example vehicles of the respective.</p>
+
+        <CampersDetails data={data} />
+
+        <Button>Show more</Button>
+      </div>
     </div>
   );
 };

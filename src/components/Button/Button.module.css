@@ -1,4 +1,6 @@
 .button {
+  width: 166px;
+  height: 56px;
   display: inline-flex;
   padding: 16px 60px;
   justify-content: center;
@@ -13,6 +15,7 @@
   line-height: 1.5;
   letter-spacing: -0.08px;
   font-size: inherit;
+  text-wrap: nowrap;
 }
 
 .button:hover,

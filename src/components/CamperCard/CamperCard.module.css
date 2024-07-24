@@ -9,7 +9,29 @@
   width: 888px;
 }
 
+.cardDescription {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.camperImage {
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.favoriteButton {
+  /* border: none; */
+  background: none;
+  padding: 2px;
+  cursor: pointer;
+  outline: none;
+}
+
 .iconHeart {
+  /* width: 24px;
+  height: 24px; */
   fill: red;
-  stroke: var(--main-text-color);
+  /* stroke: var(--main-text-color); */
 }
