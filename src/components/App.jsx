@@ -21,7 +21,7 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="catalog" element={<Catalog />} />
-        <Route path="/catalog/:advertsId/*" element={<CampersDetails />} />
+        {/* <Route path="/catalog/:advertsId/*" element={<CampersDescription />} /> */}
         <Route path="favorites" element={<Favorites />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>

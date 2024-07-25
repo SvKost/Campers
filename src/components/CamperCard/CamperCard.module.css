@@ -22,7 +22,7 @@
 }
 
 .favoriteButton {
-  /* border: none; */
+  border: none;
   background: none;
   padding: 2px;
   cursor: pointer;
@@ -30,8 +30,5 @@
 }
 
 .iconHeart {
-  /* width: 24px;
-  height: 24px; */
-  fill: red;
-  /* stroke: var(--main-text-color); */
+  fill: var(--main-text-color);
 }

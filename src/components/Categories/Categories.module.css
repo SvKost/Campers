@@ -1,0 +1,17 @@
+.detailsList {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.detailsList li {
+  display: flex;
+  padding: 12px 18px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 100px;
+  background: var(--grey-color);
+  mix-blend-mode: multiply;
+  text-wrap: nowrap;
+}

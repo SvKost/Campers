@@ -22,7 +22,11 @@ const CampersList = () => {
         {adverts.map(advert => {
           return (
             <li key={advert._id}>
-              <NavLink to={`/adverts/${advert._id}`} state={{ from: location }}>
+              <NavLink
+                className={css.linkToCard}
+                to={`/adverts/${advert._id}`}
+                state={{ from: location }}
+              >
                 <CamperCard data={advert} />
               </NavLink>
             </li>

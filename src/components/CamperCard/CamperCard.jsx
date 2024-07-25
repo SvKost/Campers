@@ -1,7 +1,7 @@
 import css from './CamperCard.module.css';
-import CampersDetails from '../CampersDetails/CampersDetails';
 import Icon from '../Icon/Icon';
 import Button from '../Button/Button';
+import Categories from '../Categories/Categories';
 
 const CamperCard = ({ data }) => {
   const { name, gallery, price, rating, location, reviews } = data;
@@ -28,7 +28,7 @@ const CamperCard = ({ data }) => {
               // onClick={handleFavoriteClick}
             >
               <Icon
-                iconName="heart"
+                iconName="heart-def"
                 width="24"
                 height="24"
                 styles={css.iconHeart}
@@ -37,14 +37,20 @@ const CamperCard = ({ data }) => {
           </div>
         </div>
 
-        <p>
-          {rating}({reviews.length} Reviews)
-        </p>
-        <p>{location}</p>
+        <div>
+          <Icon iconName="star" width="16" height="16" />
+          {rating} ({reviews.length} Reviews)
+        </div>
+        <div>
+          <Icon iconName="map-pin" width="18" height="20" />
+          {location}
+        </div>
 
         <p>The pictures shown here are example vehicles of the respective.</p>
 
-        <CampersDetails data={data} />
+        <div className={css.detailsContainer}>
+          <Categories data={data} />
+        </div>
 
         <Button>Show more</Button>
       </div>
