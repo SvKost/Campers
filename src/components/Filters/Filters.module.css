@@ -1,0 +1,45 @@
+.filtersContainer {
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.filtersLocationDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.filtersLabel {
+  color: rgba(16, 24, 40, 0.6);
+  margin-bottom: 8px;
+}
+
+.filtersInput {
+  /* max-width: 360px; */
+  display: flex;
+  padding: 18px;
+  flex-direction: column;
+  border-radius: 10px;
+  border: none;
+  background: var(--light-grey-color);
+}
+
+.filtersSupportingText {
+  color: rgba(16, 24, 40, 0.6);
+  margin-bottom: 14px;
+}
+
+.filterCardsHeader {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.filterCards {
+  padding: 24px 0 24px;
+  border-top: 1px solid #000;
+}
