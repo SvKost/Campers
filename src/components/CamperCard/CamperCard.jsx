@@ -18,9 +18,9 @@ const CamperCard = ({ data }) => {
         />
       </div>
       <div className={css.cardDescription}>
-        <div>
-          <p>{name}</p>
-          <div>
+        <div className={css.cardHeader}>
+          <p className={css.camperName}>{name}</p>
+          <div className={css.headerRight}>
             <p>€{price}</p>
             <button
               type="button"
@@ -36,19 +36,31 @@ const CamperCard = ({ data }) => {
             </button>
           </div>
         </div>
-
-        <div>
-          <Icon iconName="star" width="16" height="16" />
-          {rating} ({reviews.length} Reviews)
+        <div className={css.ratingLocationDiv}>
+          <div className={css.rating}>
+            <Icon
+              iconName="star"
+              width="16"
+              height="16"
+              styles={css.iconStar}
+            />
+            {rating} ({reviews.length} Reviews)
+          </div>
+          <div className={css.location}>
+            <Icon
+              iconName="map-pin"
+              width="18"
+              height="20"
+              styles={css.mapPin}
+            />
+            {location}
+          </div>
         </div>
-        <div>
-          <Icon iconName="map-pin" width="18" height="20" />
-          {location}
-        </div>
+        <p className={css.supportingText}>
+          The pictures shown here are example vehicles of the respective.
+        </p>
 
-        <p>The pictures shown here are example vehicles of the respective.</p>
-
-        <div className={css.detailsContainer}>
+        <div className={css.categoriesContainer}>
           <Categories data={data} />
         </div>
 

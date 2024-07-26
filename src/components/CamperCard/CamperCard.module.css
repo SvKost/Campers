@@ -1,19 +1,21 @@
 .camperCard {
   padding: 24px;
   display: flex;
-  /* align-items: flex-start; */
   gap: 24px;
   border-radius: 20px;
   border: 1px solid rgba(16, 24, 40, 0.2);
   background: inherit;
-  width: 888px;
+  max-width: 888px;
 }
 
 .cardDescription {
+  width: 526px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  gap: 24px;
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--main-text-color);
 }
 
 .camperImage {
@@ -21,7 +23,31 @@
   object-fit: cover;
 }
 
+.cardHeader {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+
+.camperName {
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .favoriteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
   border: none;
   background: none;
   padding: 2px;
@@ -31,4 +57,42 @@
 
 .iconHeart {
   fill: var(--main-text-color);
+}
+
+.ratingLocationDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+}
+
+.iconStar {
+  fill: var(--orange-color);
+  margin-right: 4px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapPin {
+  margin-right: 4px;
+}
+
+.supportingText {
+  color: var(--grey-text-color);
+  margin-bottom: 24px;
+}
+
+.categoriesContainer {
+  margin-bottom: 24px;
 }

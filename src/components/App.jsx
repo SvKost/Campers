@@ -11,9 +11,9 @@ const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
 const Catalog = lazy(() => import('../pages/Catalog/Catalog'));
 const Favorites = lazy(() => import('../pages/Favorites/Favorites'));
 const Layout = lazy(() => import('../components/Layout'));
-const CampersDetails = lazy(
-  () => import('../components/CampersDetails/CampersDetails')
-);
+// const CampersDetails = lazy(
+//   () => import('../components/CampersDetails/CampersDetails')
+// );
 
 function App() {
   return (
