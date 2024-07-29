@@ -1,5 +1,6 @@
 .filtersContainer {
-  max-width: 360px;
+  flex: 1;
+  margin-right: 64px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -18,13 +19,24 @@
 }
 
 .filtersInput {
-  /* max-width: 360px; */
+  position: relative;
+  width: 100%;
   display: flex;
   padding: 18px;
   flex-direction: column;
   border-radius: 10px;
   border: none;
   background: var(--light-grey-color);
+}
+/* 
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.mapPin {
+  margin-right: 4px;
 }
 
 .filtersSupportingText {

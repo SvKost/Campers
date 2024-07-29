@@ -17,7 +17,7 @@ const CampersList = () => {
   const location = useLocation();
 
   return (
-    <section>
+    <div className={css.campersListContainer}>
       <ul className={css.campersList}>
         {adverts.map(advert => {
           return (
@@ -34,7 +34,7 @@ const CampersList = () => {
         })}
       </ul>
       <ButtonLoadMore>Load more</ButtonLoadMore>
-    </section>
+    </div>
   );
 };
 

@@ -1,3 +1,6 @@
+.campersListContainer {
+  flex: 3;
+}
 .campersList {
   list-style: none;
   display: flex;
