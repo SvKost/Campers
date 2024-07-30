@@ -19,23 +19,23 @@
 }
 
 .filtersInput {
-  position: relative;
   width: 100%;
   display: flex;
-  padding: 18px;
+  padding: 18px 18px 18px 40px;
   flex-direction: column;
   border-radius: 10px;
   border: none;
   background: var(--light-grey-color);
 }
-/* 
-.location {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
+
+.locationInput {
+  position: relative;
+}
 
 .mapPin {
+  position: absolute;
+  left: 15px;
+  top: 15px;
   margin-right: 4px;
 }
 

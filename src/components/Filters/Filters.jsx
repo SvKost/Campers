@@ -22,7 +22,7 @@ const Filters = () => {
             name="location"
             // value={location}
             id={inputLocationId}
-            placeholder="City"
+            placeholder="Kyiv, Ukraine"
           />
           <Icon iconName="map-pin" width="18" height="20" styles={css.mapPin} />
         </div>
