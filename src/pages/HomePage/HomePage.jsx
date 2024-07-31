@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import Container from '../../components/Container/Container';
 // import AppBar from '../../components/AppBar/AppBar';
 import DocumentTitle from '../../components/DocumentTitle';
+import CampersDescription from '../../components/CampersDescription/CampersDescription';
 
 const HomePage = () => {
   return (
@@ -16,6 +17,7 @@ const HomePage = () => {
           </NavLink>
           <p>About us</p>
         </section>
+        <CampersDescription />
       </Container>
     </div>
   );
