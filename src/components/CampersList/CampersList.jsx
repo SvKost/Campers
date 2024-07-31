@@ -1,36 +1,32 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import {
   selectAdverts,
-  selectFilteredAdverts,
   selectIsError,
   selectIsLoading,
 } from '../../redux/selectors';
 import CamperCard from '../CamperCard/CamperCard';
-import { NavLink, useLocation } from 'react-router-dom';
 import ButtonLoadMore from '../ButtonLoadMore/ButtonLoadMore';
 import css from './CampersList.module.css';
 import { useState } from 'react';
 
 const CampersList = () => {
   const adverts = useSelector(selectAdverts);
+  const [advertsPerPage, setAdvertsPerPage] = useState(4);
   const isLoading = useSelector(selectIsLoading);
   const isError = useSelector(selectIsError);
   // const location = useLocation();
 
-  const itemsPerPage = 4;
-  const [advertsPerPage, setAdvertsPerPage] = useState(itemsPerPage);
+  const shownAdverts = adverts.slice(0, advertsPerPage);
 
   const handleLoadMore = () => {
-    setAdvertsPerPage(setAdvertsPerPage => setAdvertsPerPage + itemsPerPage);
+    setAdvertsPerPage(setAdvertsPerPage => setAdvertsPerPage + 4);
   };
-
-  const advertsShown = adverts.slice(0, advertsPerPage);
 
   return (
     <div className={css.campersListContainer}>
       {isError && <p>Error loading adverts</p>}
       <ul className={css.campersList}>
-        {advertsShown.map(advert => (
+        {shownAdverts.map(advert => (
           <li key={advert._id}>
             <CamperCard data={advert} />
           </li>

@@ -37,7 +37,7 @@ const advertsSlice = createSlice({
       .addCase(getAdverts.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isError = false;
-        state.items = [...state.items, ...action.payload];
+        state.items = action.payload;
       })
       .addCase(getAdverts.rejected, (state, action) => {
         state.isLoading = false;
