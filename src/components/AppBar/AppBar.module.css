@@ -1,0 +1,48 @@
+.header {
+  padding: 20px 40px;
+  border-radius: 200px;
+  border: none;
+  background: var(--button-color);
+  color: var(--page-bg-color);
+  margin-bottom: 32px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--page-bg-color);
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.08px;
+  font-size: inherit;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.favoriteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: none;
+}
+
+.iconHeart {
+  fill: var(--page-bg-color);
+}
+
+.active {
+  color: var(--main-text-color);
+}

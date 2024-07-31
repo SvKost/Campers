@@ -10,16 +10,28 @@ const AppBar = () => {
 
   return (
     <>
-      <header>
-        <nav>
-          <NavLink to="/">Home </NavLink>
-
-          <NavLink to="/catalog" className={buildLinkClass}>
-            Catalog
-          </NavLink>
-          <NavLink to="/favorites" className={buildLinkClass}>
-            <Icon iconName="favorite" width="18" height="18" />
-          </NavLink>
+      <header className={css.header}>
+        <nav className={css.nav}>
+          <div>
+            <NavLink to="/" className={buildLinkClass}>
+              Home
+            </NavLink>
+          </div>
+          <div className={css.headerRight}>
+            <NavLink to="/catalog" className={buildLinkClass}>
+              Catalog
+            </NavLink>
+            <button type="button" className={css.favoriteButton}>
+              <NavLink to="/favorites" className={buildLinkClass}>
+                <Icon
+                  iconName="heart-def"
+                  width="24"
+                  height="24"
+                  styles={css.iconHeart}
+                />
+              </NavLink>
+            </button>
+          </div>
         </nav>
       </header>
     </>
