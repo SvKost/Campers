@@ -32,9 +32,9 @@
   line-height: 1.25;
   margin-bottom: 8px;
 }
-
+/* FIXME: 
 .camperName {
-}
+} */
 
 .headerRight {
   display: flex;

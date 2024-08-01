@@ -2,7 +2,7 @@ import css from './CamperCard.module.css';
 import Icon from '../Icon/Icon';
 import Button from '../Button/Button';
 import BasicModal from '../BasicModal/BasicModal';
-import CampersDescription from '../CampersDescription/CampersDescription';
+import CamperModal from '../CamperModal/CamperModal.jsx';
 import Categories from '../Categories/Categories';
 import { useState } from 'react';
 
@@ -11,9 +11,9 @@ const CamperCard = ({ data }) => {
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
-  const openModal = () => setModalIsOpen(true);
-
-  const closeModal = () => setModalIsOpen(false);
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
 
   return (
     <div className={css.camperCard}>
@@ -73,11 +73,15 @@ const CamperCard = ({ data }) => {
           <Categories data={data} />
         </div>
 
-        <Button type="button" onClick={openModal}>
+        <Button
+          className={css.buttonOpenModal}
+          type="button"
+          onClick={() => setModalIsOpen(true)}
+        >
           Show more
         </Button>
-        <BasicModal openModal={modalIsOpen} closeModal={closeModal}>
-          <CampersDescription data={data} />
+        <BasicModal isOpen={modalIsOpen} onClose={closeModal}>
+          <CamperModal data={data} onClose={closeModal} />
         </BasicModal>
       </div>
     </div>

@@ -1,0 +1,30 @@
+.modalWrapper {
+  position: relative;
+  max-width: 982px;
+  min-height: 720px;
+  padding: 40px 16px 40px 40px;
+  background-color: var(--page-bg-color);
+  border-radius: 20px;
+  /* overflow-y: scroll; */
+}
+.buttonCloseModal {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background-color: transparent;
+}
+
+.modalHeader {
+  max-width: 902px;
+  /* overflow-y: scroll; */
+  position: relative;
+  /* height: 100%; */
+}
+
+.modalContent {
+  overflow-y: scroll;
+  margin-right: 16px;
+}
