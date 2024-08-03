@@ -22,24 +22,36 @@
   border-radius: 10px;
   object-fit: cover;
 }
-
 .cardHeader {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.cardHeaderFirst {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.camperName {
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
   line-height: 1.25;
   margin-bottom: 8px;
 }
-/* FIXME: 
-.camperName {
-} */
 
-.headerRight {
+.cardHeaderSecond {
   display: flex;
   align-items: center;
   gap: 10px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25;
 }
 
 .favoriteButton {
@@ -63,7 +75,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 24px;
 }
 
 .rating {
