@@ -1,0 +1,41 @@
+.headerLocation {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.camperName {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+
+.ratingLocationDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+}
+
+.iconStar {
+  fill: var(--orange-color);
+  margin-right: 4px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapPin {
+  margin-right: 4px;
+}
