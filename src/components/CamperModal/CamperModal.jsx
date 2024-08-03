@@ -6,6 +6,11 @@ const CamperModal = ({ data, onClose }) => {
 
   return (
     <div className={css.modalWrapper}>
+      <div className={css.modalHeader}>
+        <p>{name}</p>
+        <p>{rating}</p>
+        <p>{price}</p>{' '}
+      </div>
       <button
         className={css.buttonCloseModal}
         type="button"
@@ -18,11 +23,7 @@ const CamperModal = ({ data, onClose }) => {
           styles={css.iconCloseModal}
         ></Icon>
       </button>
-      <div className={css.modalHeader}>
-        <p>{name}</p>
-        <p>{rating}</p>
-        <p>{price}</p>
-      </div>
+
       <div className={css.modalContent}>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid non
