@@ -5,9 +5,10 @@ import BasicModal from '../BasicModal/BasicModal';
 import CamperModal from '../CamperModal/CamperModal.jsx';
 import Categories from '../Categories/Categories';
 import { useState } from 'react';
+import HeaderLocation from '../HeaderLocation/HeaderLocation.jsx';
 
 const CamperCard = ({ data }) => {
-  const { name, gallery, price, rating, location, reviews } = data;
+  const { name, gallery, price } = data;
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
@@ -28,35 +29,9 @@ const CamperCard = ({ data }) => {
       </div>
       <div className={css.cardDescription}>
         <div className={css.cardHeader}>
-          <div className={css.cardHeaderFirst}>
-            <p className={css.camperName}>{name}</p>
-
-            {/* LOCATION */}
-            <div className={css.ratingLocationDiv}>
-              <div className={css.rating}>
-                <Icon
-                  iconName="star"
-                  width="16"
-                  height="16"
-                  styles={css.iconStar}
-                />
-                {rating} ({reviews.length} Reviews)
-              </div>
-              <div className={css.location}>
-                <Icon
-                  iconName="map-pin"
-                  width="18"
-                  height="20"
-                  styles={css.mapPin}
-                />
-                {location}
-              </div>
-            </div>
-          </div>
-
-          {/* PRICE */}
-          <div className={css.cardHeaderSecond}>
-            <p>€{price}</p>
+          <HeaderLocation data={data} />
+          <div className={css.camperPriceDiv}>
+            <div className={css.camperPrice}>€{price}</div>
             <button
               type="button"
               className={css.favoriteButton}
