@@ -1,15 +1,15 @@
+import HeaderLocation from '../HeaderLocation/HeaderLocation';
 import Icon from '../Icon/Icon';
 import css from './CamperModal.module.css';
 
 const CamperModal = ({ data, onClose }) => {
-  const { name, price, location, reviews, rating, gallery } = data;
+  const { name, price, gallery } = data;
 
   return (
     <div className={css.modalWrapper}>
       <div className={css.modalHeader}>
-        <p>{name}</p>
-        <p>{rating}</p>
-        <p>{price}</p>{' '}
+        <HeaderLocation data={data} />
+        <p>€{price}</p>
       </div>
       <button
         className={css.buttonCloseModal}
