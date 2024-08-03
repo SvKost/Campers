@@ -40,10 +40,14 @@ const CamperModal = ({ data, onClose }) => {
           </div>
           <div className={css.descriptionText}>{description}</div>
         </div>
-        <div className={css.additionalDescription}>
-          <div className={css.additionalHeader}>Features</div>
-          <div className={css.additionalHeader}>Reviews</div>
-        </div>
+        <ul className={css.tabList}>
+          <li>
+            <button>Features</button>
+          </li>
+          <li>
+            <button>Reviews</button>
+          </li>
+        </ul>
       </div>
     </div>
   );
