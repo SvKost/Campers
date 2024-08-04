@@ -28,26 +28,30 @@ const CamperModal = ({ data, onClose }) => {
         <div className={css.camperDescription}>
           <div className={css.gallery}>
             {gallery.map((image, index) => {
-              <img
-                key={index}
-                src={image}
-                alt={`${name} ${index + 1}`}
-                className={css.camperImage}
-                width={290}
-                height={310}
-              />;
+              return (
+                <img
+                  key={index}
+                  src={image}
+                  alt={`${name} ${index + 1}`}
+                  width={290}
+                  height={310}
+                  className={css.camperImage}
+                  style={{ width: `calc(100% / ${gallery.length} - 16px)` }}
+                />
+              );
             })}
           </div>
           <div className={css.descriptionText}>{description}</div>
         </div>
         <ul className={css.tabList}>
           <li>
-            <button>Features</button>
+            <button className={css.tabListBtn}>Features</button>
           </li>
           <li>
-            <button>Reviews</button>
+            <button className={css.tabListBtn}>Reviews</button>
           </li>
         </ul>
+        {/* <div className={css.tabLine}></div> */}
       </div>
     </div>
   );
