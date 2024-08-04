@@ -1,8 +1,16 @@
+import { Suspense } from 'react';
+import CamperFeatures from '../CamperFeatures/CamperFeatures';
+import CamperReviews from '../CamperReviews/CamperReviews';
 import HeaderLocation from '../HeaderLocation/HeaderLocation';
 import Icon from '../Icon/Icon';
 import css from './CamperModal.module.css';
+import { NavLink, Route, Routes } from 'react-router-dom';
 
 const CamperModal = ({ data, onClose }) => {
+  if (!data) {
+    return null;
+  }
+
   const { name, price, gallery, description } = data;
 
   return (
@@ -12,7 +20,6 @@ const CamperModal = ({ data, onClose }) => {
           <HeaderLocation data={data} />
         </div>
         <p className={css.camperPrice}>€{price}</p>
-
         <button
           className={css.buttonCloseModal}
           type="button"
@@ -43,15 +50,24 @@ const CamperModal = ({ data, onClose }) => {
           </div>
           <div className={css.descriptionText}>{description}</div>
         </div>
-        <ul className={css.tabList}>
-          <li>
+
+        <div className={css.additionalInfo}>
+          <ul className={css.tabList}>
+            {/* <NavLink to="features" className={css.tabListBtn}> */}
             <button className={css.tabListBtn}>Features</button>
-          </li>
-          <li>
+            {/* </NavLink> */}
+            {/* <NavLink to="reviews" className={css.tabListBtn}> */}
             <button className={css.tabListBtn}>Reviews</button>
-          </li>
-        </ul>
-        {/* <div className={css.tabLine}></div> */}
+            {/* </NavLink> */}
+          </ul>
+          {/* <div className={css.tabLine}></div> */}
+          {/* <Suspense>
+            <Routes>
+              <Route path="features" element={<CamperFeatures />} />
+              <Route path="reviews" element={<CamperReviews />} />
+            </Routes>
+          </Suspense> */}
+        </div>
       </div>
     </div>
   );

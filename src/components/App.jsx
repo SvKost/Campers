@@ -7,6 +7,9 @@ import './App.css';
 // import Favorites from '../pages/Favorites/Favorites';
 
 import { lazy } from 'react';
+import CamperModal from './CamperModal/CamperModal';
+import CamperFeatures from './CamperFeatures/CamperFeatures';
+import CamperReviews from './CamperReviews/CamperReviews';
 const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
 const Catalog = lazy(() => import('../pages/Catalog/Catalog'));
 const Favorites = lazy(() => import('../pages/Favorites/Favorites'));
@@ -21,7 +24,10 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="catalog" element={<Catalog />} />
-        {/* <Route path="/catalog/:advertsId/*" element={<CampersDescription />} /> */}
+        <Route path="/catalog/:advertsId/*" element={<CamperModal />}>
+          <Route path="features" element={<CamperFeatures />} />
+          <Route path="reviews" element={<CamperReviews />} />
+        </Route>
         <Route path="favorites" element={<Favorites />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
